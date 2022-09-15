@@ -1,0 +1,163 @@
+/* Start global rules */
+*{
+    --Verydarkblue :hsl(217, 54%, 11%);
+    --Verydarkblue2 : hsl(216, 50%, 16%);
+    --Verydarkblue3 : hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+}
+:root{
+    box-sizing: border-box;
+}
+p{
+    font-size: 18px;
+}
+.containar{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.flex {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+/* End global rules */
+/* Start main */
+.main {
+    padding: 40px 20px;
+    background-color: var(--Verydarkblue);
+}
+.main .containar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--Verydarkblue2);
+    width: 300px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    position: relative;
+    /* box-shadow: 20px 20px 5px var(--Cyan) , -20px 20px 5px var(--Cyan); */
+}
+.main .containar .images{
+    position: relative;
+
+}
+
+.main .containar .images .landing{
+    max-width: 100%;
+    height: 300px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    position: relative;
+}
+
+.main .containar .images::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--Cyan);
+    z-index: 2;
+    opacity: 40%;
+    display: none;
+}
+.main .containar .images:hover::before, .main .containar .images:hover img:nth-child(2){
+    display: block;
+    cursor: pointer;
+}
+
+.main .containar .images img:nth-child(2){
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    z-index: 3;
+}
+
+.main .containar .text h1{
+    color: var(--White);
+    font-size: 18px;
+}
+.main .containar .text h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.main .containar .text p{
+    color: var(--Softblue);
+    line-height: 1.6;
+}
+.main .containar .footer .up{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .containar .footer .up {
+    color: var(--Softblue);
+}
+
+.main .containar .footer .up .active {
+    color: var(--Cyan);
+}
+.main .containar .footer .up .time p{
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.main .containar .footer .up .active P {
+    margin-left: 5px;
+}
+.main .containar .footer .down{
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.main .containar .footer .down::before{
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 1px;
+    position: absolute;
+    background-color: var(--Verydarkblue3);
+}
+
+.main .containar .footer .down .foot-text{
+    margin-left: 20px;
+}
+.main .containar .footer .down .foot-text p{
+    color: var(--Softblue);
+}
+.main .containar .footer .down .foot-text span{
+    color: var(--White);
+}
+.main .containar .footer .down .foot-text span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.main .containar .footer .down img{
+    width: 30px;
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+/* End main */
